@@ -1,0 +1,24 @@
+{
+    "users": [
+        {
+            "name": "Alice",
+            "qcm_history": [
+                {
+                    "score": 3,
+                    "date": "2023-04-01 15:32:10",
+                    "category": "Python"
+                },
+                {
+                    "score": 2,
+                    "date": "2023-04-02 14:22:30",
+                    "category": "Python"
+                },
+                {
+                    "score": 4,
+                    "date": "2024-12-27 01:58:16",
+                    "category": "C"
+                }
+            ]
+        }
+    ]
+}

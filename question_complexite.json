@@ -1,0 +1,27 @@
+[
+    {
+        "question": "Quelle est la complexité temporelle de la recherche linéaire dans un tableau non trié?",
+        "choices": ["1. O(1)", "2. O(log n)", "3. O(n)", "4. O(n log n)"],
+        "correct": 3
+    },
+    {
+        "question": "Quelle est la complexité spatiale de l'algorithme de tri par insertion?",
+        "choices": ["1. O(1)", "2. O(n)", "3. O(n^2)", "4. O(log n)"],
+        "correct": 1
+    },
+    {
+        "question": "Quel est le meilleur cas de complexité temporelle du tri à bulles?",
+        "choices": ["1. O(n^2)", "2. O(n log n)", "3. O(n)", "4. O(1)"],
+        "correct": 3
+    },
+    {
+        "question": "Quelle est la complexité temporelle moyenne de l'algorithme de tri rapide (QuickSort)?",
+        "choices": ["1. O(n)", "2. O(n log n)", "3. O(n^2)", "4. O(1)"],
+        "correct": 2
+    },
+    {
+        "question": "Quelle structure de données a une complexité de recherche moyenne de O(1)?",
+        "choices": ["1. Tableau", "2. Liste chaînée", "3. Arbre binaire", "4. Table de hachage"],
+        "correct": 4
+    }
+]

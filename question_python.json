@@ -1,0 +1,42 @@
+[
+    {
+        "question": "Quel est le type de données de la variable `x` après l'exécution de `x = 3.14` en Python?",
+        "choices": ["1. int", "2. float", "3. str", "4. bool"],
+        "correct": 2
+    },
+    {
+        "question": "Quelle est la méthode correcte pour ajouter un élément à une liste en Python?",
+        "choices": ["1. list.add(x)", "2. list.append(x)", "3. list.insert(x)", "4. list.push(x)"],
+        "correct": 2
+    },
+    {
+        "question": "Quel est le résultat de l'expression `2**3` en Python?",
+        "choices": ["1. 5", "2. 6", "3. 7", "4. 8"],
+        "correct": 4
+    },
+    {
+        "question": "Quelle bibliothèque est utilisée pour la manipulation des tableaux en Python?",
+        "choices": ["1. NumPy", "2. Pandas", "3. Matplotlib", "4. Scikit-learn"],
+        "correct": 1
+    },
+    {
+        "question": "Comment créer un dictionnaire en Python?",
+        "choices": ["1. dict = {}", "2. dict = []", "3. dict = ()", "4. dict = <>"],
+        "correct": 1
+    },
+    {
+        "question": "Quelle méthode est utilisée pour trier une liste en Python ?",
+        "choices": ["1.list.sort()", "2.list.order()", "3.list.arrange()", "4.list.sorting()"],
+        "correct": "list.sort()"
+    },
+    {
+        "question": "Quelle est la bonne syntaxe pour créer une fonction en Python ?",
+        "choices": ["1.function myFunction()", "2.def myFunction():", "3.create myFunction()", "4.func myFunction()"],
+        "correct": "def myFunction():"
+    },
+    {
+        "question": "Quel est le type de données utilisé pour stocker une séquence de caractères en Python ?",
+        "choices": ["1.String", "2.Char", "3.Text", "4.Sequence"],
+        "correct": "String"
+    }
+]

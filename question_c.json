@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Quel mot-clé est utilisé pour déclarer une constante en C?",
+        "choices": ["1. const", "2. final", "3. constant", "4. static"],
+        "correct": 1
+    },
+    {
+        "question": "Quelle est la taille d'un entier (int) en C sur une architecture 32 bits?",
+        "choices": ["1. 2 octets", "2. 4 octets", "3. 8 octets", "4. 16 octets"],
+        "correct": 2
+    },
+    {
+        "question": "Quelle est la sortie de l'expression `printf(\"%d\", 5+5);` en C?",
+        "choices": ["1. 5", "2. 10", "3. %d", "4. 55"],
+        "correct": 2
+    },
+    {
+        "question": "Quel est l'opérateur d'incrémentation en C?",
+        "choices": ["1. ++", "2. --", "3. **", "4. //"],
+        "correct": 1
+    }
+]
