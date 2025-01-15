@@ -1,6 +1,6 @@
 [
     {
-        "question": "Quelle est la complexité temporelle de la recherche linéaire dans un tableau non trié?",
+        "question": "Quelle est la complexité temporelle de la recherche linéaire dans un tableau non trié ?",
         "choices": ["1. O(1)", "2. O(log n)", "3. O(n)", "4. O(n log n)"],
         "correct": 3
     },
