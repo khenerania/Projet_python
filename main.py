@@ -1,76 +1,101 @@
-from user import creer_compte, connexion, initialiser_fichier_utilisateurs, afficher_historique_utilisateur
-from qcm_game import jouer_qcm
-from question_qcm import load_questions
+import stockage
+from user import connexion, creer_compte, afficher_historique_utilisateur, sauvegarder_score
+from question_qcm import score
+from exportation import afficher_menue_exportation
+import time
+from main_function import (
+    afficher_instructions_initiales,
+    afficher_page_bienvenue,
+    afficher_menu_principal,
+    afficher_menu_categories,
+    afficher_classement,
+    afficher_message_fin,demander_feedback
+)
+from colorama import init, Fore, Style
 
-# Initialiser le fichier JSON des utilisateurs
-initialiser_fichier_utilisateurs()
+# Initialisation de Colorama
+init(autoreset=True)
 
-# Fonction d'affichage de la page de bienvenue
-def afficher_page_bienvenue():
-    print("\n====================================")
-    print("          🎉 BIENVENUE 🎉           ")
-    print("====================================")
-    print("Testez vos connaissances avec ce QCM interactif !")
-    input("\nAppuyez sur Entrée pour continuer...")
+FICHIER_UTILISATEURS = "donne_users.json"
 
-# Fonction d'affichage du guide d'utilisation
-def afficher_guide_utilisation():
-    print("\n====================================")
-    print("        📘 GUIDE D'UTILISATION 📘    ")
-    print("====================================")
-    print("Bienvenue dans l'application de QCM. Voici comment l'utiliser :")
-    print("1. **Connexion** : Connectez-vous en saisissant votre nom d'utilisateur et mot de passe.")
-    print("2. **Créer un compte** : Si vous n'avez pas de compte, créez-en un pour commencer.")
-    print("3. **Jouer au QCM** : Choisissez une catégorie et répondez aux questions proposées.")
-    print("4. **Afficher l'historique** : Consultez vos performances précédentes après connexion.")
-    print("5. **Quitter** : Fermez l'application.")
-    print("\n**Conseils :**")
-    print("- Vos scores sont automatiquement enregistrés après chaque session.")
-    print("- Assurez-vous que tous les fichiers nécessaires (.json) sont présents.")
-    print("- Consultez régulièrement vos performances pour vous améliorer !")
-    input("\nAppuyez sur Entrée pour retourner au menu principal...")
+# Charger les utilisateurs existants
+users = stockage.charger_donnes_users(FICHIER_UTILISATEURS)
 
-# Fonction d'affichage du menu principal
-def afficher_menu_principal():
-    print("\n====================================")
-    print("         🎓 MENU PRINCIPAL 🎓       ")
-    print("====================================")
-    print("1. Connexion")
-    print("2. Créer un compte")
-    print("3. Jouer au QCM")
-    print("4. Afficher l'historique")
-    print("5. Quitter")
-    print("6. Guide d'utilisation")  
-    return input("Choisissez une option : ")
+# Afficher la page de bienvenue
+afficher_page_bienvenue()
 
-def main():
-    afficher_page_bienvenue()
-    utilisateur_connecte = None
+# Afficher le guide initial
+afficher_instructions_initiales()
 
-    while True:
-        choix = afficher_menu_principal()
+# Vérifiez si l'utilisateur existe
+user = None
+while not user:
+    choix_menu = afficher_menu_principal()
+    if choix_menu == '1':
+        user = connexion(users)
+    elif choix_menu == '2':
+        user = creer_compte(users)
+        stockage.sauvegarder_donnes_users(users, FICHIER_UTILISATEURS)
+    elif choix_menu == '3':
+        afficher_classement(users)
+    elif choix_menu == '4':
+        afficher_message_fin()
+        stockage.sauvegarder_donnes_users(users, FICHIER_UTILISATEURS)  # Sauvegarder avant de quitter
+        exit()
+    else:
+        print(Fore.RED + "❌ Choix invalide. Veuillez réessayer." + Style.RESET_ALL)
 
-        if choix == "1": 
-            utilisateur_connecte = connexion()
-        elif choix == "2":  
-            creer_compte()
-        elif choix == "3":  
-            if utilisateur_connecte:
-                jouer_qcm(utilisateur_connecte)
-            else:
-                print("⚠️ Veuillez vous connecter d'abord.")
-        elif choix == "4": 
-            if utilisateur_connecte:
-                afficher_historique_utilisateur(utilisateur_connecte)
-            else:
-                print("⚠️ Veuillez vous connecter d'abord.")
-        elif choix == "5":  
-            print("👋 Merci d'avoir utilisé l'application. Au revoir !")
-            break
-        elif choix == "6":  
-            afficher_guide_utilisation()
-        else:
-            print("⚠️ Choix invalide. Veuillez réessayer.")
+# Boucle principale de l'application
+while True:
+    print("\nQue voulez-vous faire?")
+    print(Fore.CYAN + "1. Répondre à un QCM" + Style.RESET_ALL)
+    print(Fore.CYAN + "2. Voir vos scores précédents" + Style.RESET_ALL)
+    print(Fore.CYAN + "3. Classement des scores" + Style.RESET_ALL)
+    print(Fore.CYAN + "4. Quitter" + Style.RESET_ALL)
+    print(Fore.CYAN + "5. feedback" + Style.RESET_ALL)
+    choix_action = input("Votre choix: ")
 
-if __name__ == "__main__":
-    main()
+    if choix_action == '1':
+        print(Fore.YELLOW + "🔍 Dans ce QCM, vous devez répondre à des questions de différentes catégories que vous choissisez " + Style.RESET_ALL)
+        category, questions = afficher_menu_categories()
+        if category and questions:
+            print(Fore.GREEN + f"✅ Catégorie choisie: {category}" + Style.RESET_ALL)
+            print(Fore.GREEN + f"📋 Nombre de questions à résoudre: {len(questions)}" + Style.RESET_ALL)
+
+            # Début du chronométrage
+            start_time = time.time()
+
+            # Calcul du score
+            time_limit_per_question = 30
+            score_result = score(questions, time_limit_per_question)
+
+            # Fin du chronométrage
+            end_time = time.time()
+
+            # Calcul de la durée
+            total_time = end_time - start_time
+            print(Fore.BLUE + f"\n🕒 Temps total pour compléter le QCM : {total_time:.2f} secondes" + Style.RESET_ALL)
+
+            # Ajouter le score et le temps à l'utilisateur
+            sauvegarder_score(user, score_result, category, total_time)  # Passer le temps total
+            stockage.sauvegarder_donnes_users(users, FICHIER_UTILISATEURS)
+
+            # Option d'exportation des scores
+            afficher_menue_exportation(user)
+
+    elif choix_action == '2':
+        print(Fore.YELLOW + "📊 Scores précédents:" + Style.RESET_ALL)
+        afficher_historique_utilisateur(user)
+
+    elif choix_action == '3':
+        afficher_classement(users)
+
+    elif choix_action == '4':
+        afficher_message_fin()
+        stockage.sauvegarder_donnes_users(users, FICHIER_UTILISATEURS)
+    elif choix_action == '5':
+        demander_feedback(user)
+        break
+
+    else:
+        print(Fore.RED + "❌ Choix invalide, veuillez réessayer." + Style.RESET_ALL)
