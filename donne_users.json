@@ -1,41 +1,52 @@
 {
     "users": [
         {
-            "name": "Alice",
+            "name": "user1",
+            "password": "1234",
             "qcm_history": [
                 {
-                    "score": 3,
-                    "date": "2023-04-01 15:32:10",
-                    "category": "Python"
-                },
-                {
-                    "score": 2,
-                    "date": "2023-04-02 14:22:30",
-                    "category": "Python"
-                },
-                {
+                    "category": "C",
                     "score": 4,
-                    "date": "2024-12-27 01:58:16",
-                    "category": "C"
+                    "date": "2025-01-17 03:01:43",
+                    "time_spent": 3.596004009246826
+                },
+                {
+                    "category": "C",
+                    "score": 3,
+                    "date": "2025-01-17 03:03:12",
+                    "time_spent": 3.8041462898254395
+                },
+                {
+                    "category": "C",
+                    "score": 4,
+                    "date": "2025-01-17 03:12:25",
+                    "time_spent": 3.025484800338745
+                },
+                {
+                    "category": "C",
+                    "score": 2,
+                    "date": "2025-01-17 03:50:43",
+                    "time_spent": 46.98938035964966
+                }
+            ]
+        },
+        {
+            "name": "user2",
+            "password": "2345",
+            "qcm_history": [
+                {
+                    "category": "C",
+                    "score": 4,
+                    "date": "2025-01-17 03:03:57",
+                    "time_spent": 3.309507131576538
+                },
+                {
+                    "category": "C",
+                    "score": 4,
+                    "date": "2025-01-17 03:15:55",
+                    "time_spent": 2.7773287296295166
                 }
             ]
         }
-    ],
-    "nihad": {
-        "password": "1234",
-        "historique": [
-            {
-                "date": "2025-01-14 22:32:00",
-                "score": 2
-            },
-            {
-                "date": "2025-01-14 23:11:28",
-                "score": 3
-            },
-            {
-                "date": "2025-01-14 23:15:52",
-                "score": 8
-            }
-        ]
-    }
+    ]
 }

@@ -1,0 +1,6 @@
+Scores pour user1 :
+=======================================
+Date: 2025-01-17 03:01:43, Cat�gorie: C, Score: 4, Temps pass�: 3.596004009246826 sec
+Date: 2025-01-17 03:03:12, Cat�gorie: C, Score: 3, Temps pass�: 3.8041462898254395 sec
+Date: 2025-01-17 03:12:25, Cat�gorie: C, Score: 4, Temps pass�: 3.025484800338745 sec
+Date: 2025-01-17 03:50:43, Cat�gorie: C, Score: 2, Temps pass�: 46.98938035964966 sec
