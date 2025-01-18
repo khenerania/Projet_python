@@ -1,3 +1,4 @@
+
 import json
 import os
 
@@ -63,4 +64,5 @@ def afficher_historique_utilisateur(username):
                     print(f"  - Date : {session['date']}, Score : {session['score']}")
         else:
             print(" ⚠️ Utilisateur non trouvé.")
+
 

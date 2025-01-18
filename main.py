@@ -74,3 +74,29 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+'''
+import user2
+
+# Main function to handle user interaction
+def main():
+    print("Welcome to the quiz game!")
+
+    # Ask for username and password
+    username = input("Enter your username: ")
+    password = input("Enter your password: ")
+
+    # Authenticate the user
+    if user2.authentication(username, password):
+        print("Do you want to add a new QCM entry? (y/n)")
+        choice = input()
+        
+    else:
+        print("Creating a new user...")
+        qcm_history = []  # New user has no history initially
+        user2.add_user(username, password, qcm_history)
+        print("User created successfully. You can now log in and start the quiz.")
+
+if __name__ == "__main__":
+    main()
+'''
