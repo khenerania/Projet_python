@@ -57,6 +57,8 @@ while True:
 
     if choix_action == '1':
         print(Fore.YELLOW + "🔍 Dans ce QCM, vous devez répondre à des questions de différentes catégories que vous choissisez " + Style.RESET_ALL)
+        print(Fore.YELLOW + "🔍 Dans ce QCM,chaque question a un temps limite de 30 secondes ,depassement de temps vous aurez un zero pour la question " + Style.RESET_ALL)
+        print(Fore.YELLOW + "🔍 Dans ce QCM,votre scores est calcules et afficher plus tard   " + Style.RESET_ALL)
         category, questions = afficher_menu_categories()
         if category and questions:
             print(Fore.GREEN + f"✅ Catégorie choisie: {category}" + Style.RESET_ALL)
