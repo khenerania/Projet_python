@@ -1,7 +1,7 @@
 # QCM Application Project
 
-Welcome to the  **QCM Application Project**  repository!
-This project is a Python-based application for managing and answering multiple-choice questions (QCM). It allows users to register, log in, take quizzes, and view their scores and history
+Welcome to the **QCM Application Project** repository!
+This project is a Python-based application for managing and answering multiple-choice questions (QCM). It allows users to register, log in, take quizzes, and view their scores and history.
 
 ## Table of Contents
 1. [Project Description](#project-description)
@@ -19,18 +19,18 @@ The QCM application enables users to:
 - View their scores and test history.
 - Export results to a file (CSV or text).
 - Timer feature: A timer for each question or for the whole test.
+
 This project incorporates file handling, data persistence (JSON), and modular programming to achieve the functionalities.
 
 ## Features
 - **User Management**: Registration, login, and history tracking.
 - **Question Management**: Randomized questions from JSON files based on categories.
-- **Categories**: Users can choose categories like Python, Complexité, C .
+- **Categories**: Users can choose categories like Python, Complexité, C.
 - **Timer**: Implemented a timer for each question or for the whole test.
 - **Feedback System**: Instant feedback with correct answers for wrong responses.
 - **Score Calculation**: Display the total score at the end of the quiz.
 - **Ranking**: Users can view their ranking in comparison to others based on their scores.
 - **Result Exporting**: Ability to export test results in CSV or text format.
-
 
 ## Project Structure
 The project folder is organized as follows:
@@ -51,8 +51,6 @@ PROJET_PYTHON/
 ├── scores.txt                       # Text file storing scores
 ├── stockage.py                      # Script for data storage management
 ├── user.py                          # User management functions
-├──  video/                          # Folder for  video
-│   └── app_demo.mp4                 # Video demonstrating the app                 
 └── README.md                        # Documentation file
 ```
 
@@ -67,30 +65,29 @@ PROJET_PYTHON/
    python main.py
    ```
 3. Follow the on-screen instructions to:
-    - **Register** or **Log In** to your account.
-    - **Choose a category** ( Python , Complexité, C) to answer questions from.
-    - **Answer the questions** within the given time limit.
-    - **View your score** and test history after completing the quiz.
-    - **View your ranking** compared to other users based on your scores.
-    - **Export your results** to a file (CSV or text format).
-    - **Provide feedback** on the application if desired.
-    
+   - **Register** or **Log In** to your account.
+   - **Choose a category** (Python, Complexité, C) to answer questions from.
+   - **Answer the questions** within the given time limit.
+   - **View your score** and test history after completing the quiz.
+   - **View your ranking** compared to other users based on your scores.
+   - **Export your results** to a file (CSV or text format).
+   - **Provide feedback** on the application if desired.
+
 4. After completing the quiz, you can:
-    - **Check your previous scores**.
-    - **View the ranking** to compare your performance with others.
-    - **Re-take quizzes** to improve your scores.
-  
+   - **Check your previous scores**.
+   - **View the ranking** to compare your performance with others.
+   - **Re-take quizzes** to improve your scores.
+
 ## Demo Video
 You can view a demo of the application in action by clicking the following link:
 
-[Watch Demo Video](https://drive.google.com/your_copied_link_here)
+[Watch Demo Video]()
 
-### Team Members
+## Team Members
 - [Melouk Nihad]
-- [Khene rania]
-- [Tagnit hamou soumaya]
+- [Khene Rania]
+- [Tagnit Hamou Soumaya]
 
 ---
 
 Thank you for reviewing our project!
-
