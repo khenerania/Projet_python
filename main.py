@@ -94,6 +94,7 @@ while True:
 
     elif choix_action == '4':
         afficher_message_fin()
+        break
         stockage.sauvegarder_donnes_users(users, FICHIER_UTILISATEURS)
     elif choix_action == '5':
         demander_feedback(user)
