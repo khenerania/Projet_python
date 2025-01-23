@@ -78,10 +78,10 @@ PROJET_PYTHON/
    - **View the ranking** to compare your performance with others.
    - **Re-take quizzes** to improve your scores.
 
-## Demo Video
-You can view a demo of the application in action by clicking the following link:
+## How the App Works
+You can view a demonstration of the application in action by clicking the following link:
 
-[Watch Demo Video]()
+[Watch demonstration Video](https://drive.google.com/file/d/1WwFRXaKuSUr2Ko40vD3hguiVTmmkvIGp/view?usp=drive_link)
 
 ## Team Members
 - [Melouk Nihad]
