@@ -68,16 +68,6 @@ def afficher_menu_categories():
     return category, questions
             
 
-# Fonction pour afficher les instructions
-def afficher_instructions():
-    print("\n===============================================================================================")
-    print("                                  📋 INSTRUCTIONS 📋")
-    print("=================================================================================================")
-    print("1. Connectez-vous ou créez un compte pour accéder au QCM.")
-    print("2. Choisissez une catégorie de questions.")
-    print("3. Répondez aux questions dans le délai imparti.")
-    print("4. Consultez vos scores et exportez-les si nécessaire.")
-    print("5. Améliorez votre score en rejouant les QCM.")
 #affichage de classement
 def afficher_classement(users):
    
